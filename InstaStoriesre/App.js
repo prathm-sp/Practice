@@ -1,18 +1,9 @@
+//Importing React
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
-import MainScreen from "./Components/MainScreen";
 
-export default class App extends React.Component {
-  render() {
-    return <MainScreen />;
-  }
+//This Component wrapping our all screens in it.
+import MainScreen from "./Routes";
+
+export default function App() {
+  return <MainScreen />;
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});

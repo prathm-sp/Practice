@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+
+//Importing Stylesheets from react-native. It is very similar to CSS StyleSheet
 import {
   StyleSheet,
   Text,
@@ -9,8 +11,6 @@ import {
 } from "react-native";
 
 export default function App({ navigation }) {
-  var [email, setEmail] = useState("");
-  var [password, setPassword] = useState("");
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -21,7 +21,6 @@ export default function App({ navigation }) {
           style={styles.inputText}
           placeholder="Email..."
           placeholderTextColor="#003f5c"
-          onChangeText={(text) => setEmail(text.target.value)}
         />
       </View>
       <View style={styles.inputView}>
@@ -30,7 +29,6 @@ export default function App({ navigation }) {
           style={styles.inputText}
           placeholder="Password..."
           placeholderTextColor="#003f5c"
-          onChangeText={(text) => setPassword(text.target.value)}
         />
       </View>
       <TouchableOpacity>
@@ -86,10 +84,10 @@ const styles = StyleSheet.create({
   inputText: {
     height: 50,
     borderColor: "#9874aa",
-    color: "white",
+    color: "black",
   },
   forgot: {
-    color: "white",
+    color: "black",
     fontSize: 11,
   },
   loginBtn: {
